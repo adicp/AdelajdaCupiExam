@@ -14,8 +14,6 @@ const OnePirate = (props) => {
     const [pegLeg, setPegLeg] = useState(pirate.pegLeg);
     const [eyePatch, setEyePatch] = useState(pirate.eyePatch);
     const [hookHand, setHookHand] = useState(pirate.hookHand);
-    // const [loaded, setLoaded] = useState(false);
-    // const navigate = useNavigate();
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pirates/" + id)
@@ -29,6 +27,8 @@ const OnePirate = (props) => {
             })
     }, [])
 
+
+    // a function for onClick event to send a put request to change 
 
     return (
         <div>
@@ -45,8 +45,8 @@ const OnePirate = (props) => {
                                     <p>Position: {pirate.crewPosition}</p>
                                     <p>Treasures: {pirate.noOfTreasure}</p>
                                     <p>Peg Leg: {pegLeg ? "Yes": "No"} <button onClick={e =>setPegLeg(!pegLeg)}>{pegLeg ? "No": "Yes" }</button></p>
-                                    <p>Peg Leg: {eyePatch ? "Yes": "No"} <button onClick={e =>setEyePatch(!eyePatch)}>{eyePatch ? "No": "Yes" }</button></p>
-                                    <p>Peg Leg: {hookHand ? "Yes": "No"} <button onClick={e =>setHookHand(!hookHand)}>{hookHand ? "No": "Yes" }</button></p>
+                                    <p>Eye Patch: {eyePatch ? "Yes": "No"} <button onClick={e =>setEyePatch(!eyePatch)}>{eyePatch ? "No": "Yes" }</button></p>
+                                    <p>Hook Hand: {hookHand ? "Yes": "No"} <button onClick={e =>setHookHand(!hookHand)}>{hookHand ? "No": "Yes" }</button></p>
                                 </CardContent>
                             </Card>
                         </div>
