@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route  exact path = "/" default element={<AllPirates />} />
         <Route  exact path = "/pirates" default element={<AllPirates />} />
         <Route  exact path = "/pirate/new" element = {<AddPirate />} />
         <Route  exact path = "/pirates/:id/" element = {<OnePirate />} />
