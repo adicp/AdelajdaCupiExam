@@ -32,7 +32,7 @@ const OnePirate = (props) => {
 
     return (
         <div>
-            <Header />
+            <Header pageInd={pirate.pirateName}/>
             <div>
                         <div>
                             <img className = {styles.bigimage} src = {pirate.pirateImg} alt= "pirate image"/>
